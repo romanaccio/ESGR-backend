@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
 
+const PORT = process.env.PORT || 4000;
+
 const bodyParser = require('body-parser');
 const { randomBytes } = require('crypto');
 
@@ -26,6 +28,6 @@ app.post('/posts', async (req, res) => {
   res.status(201).send(posts[id]);
 });
 
-app.listen(4000, () => {
-  console.log('Hello! Listening to port 4000 for posts');
+app.listen(PORT, () => {
+  console.log(`Hello! Listening to port ${PORT} for posts`);
 });
