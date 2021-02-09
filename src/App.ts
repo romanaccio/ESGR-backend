@@ -16,7 +16,7 @@ class App {
 
     const surveys = {};
     router.get('/', (req, res) => {
-      res.send('<h1>Hello ESG Revolution!!!</h1>');
+      res.send('<h1>Hi ESG Revolution!</h1>');
     });
 
     router.get('/surveys', (req, res) => {
