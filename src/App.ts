@@ -11,6 +11,7 @@ class App {
     this.express.use(cors());
     this.mountRoutes();
   }
+
   private mountRoutes(): void {
     const router = express.Router();
 

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && npm run start",
+    "build": "tsc",
     "start": "nodemon dist/index.js",
     "postinstall": "tsc",
     "watch-ts": "tsc -w"
