@@ -24,10 +24,9 @@ app.post('/surveys', async (req, res) => {
   const id = randomBytes(4).toString('hex');
   console.log(`received body : ${req.body}`);
   const { username, data } = req.body;
-
   const survey = { id: id, username: username, data: data };
-  surveys[survey.username] = survey;
-  res.status(201).send(surveys[survey.username]);
+  surveys[id] = survey;
+  res.status(201).send(survey);
 });
 
 app.listen(PORT, () => {
