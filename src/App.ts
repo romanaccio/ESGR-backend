@@ -3,6 +3,12 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const { randomBytes } = require('crypto');
 
+interface ReportInterface {
+  username: string;
+  reportStart: number;
+  data: any;
+}
+
 class App {
   public express;
   constructor() {
@@ -27,7 +33,7 @@ class App {
     router.post('/surveys', async (req, res) => {
       const id = randomBytes(4).toString('hex');
       console.log(`received body : ${req.body}`);
-      const { username, reportStart, data } = req.body;
+      const { username, reportStart, data }: ReportInterface = req.body;
       const survey = {
         id: id,
         username: username,
