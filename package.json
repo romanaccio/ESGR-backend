@@ -6,7 +6,8 @@
     "build": "tsc",
     "start": "nodemon dist/index.js",
     "postinstall": "tsc",
-    "watch-ts": "tsc -w"
+    "build-watch": "tsc -w",
+    "start-dev": "nodemon src/index.ts"
   },
   "license": "MIT",
   "dependencies": {
