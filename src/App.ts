@@ -27,11 +27,11 @@ class App {
     router.post('/surveys', async (req, res) => {
       const id = randomBytes(4).toString('hex');
       console.log(`received body : ${req.body}`);
-      const { username, timestamp, data } = req.body;
+      const { username, reportStart, data } = req.body;
       const survey = {
         id: id,
         username: username,
-        timestamp: timestamp,
+        reportStart: reportStart,
         data: data,
       };
       surveys[id] = survey;
