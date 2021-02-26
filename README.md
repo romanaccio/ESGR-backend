@@ -7,5 +7,5 @@ You can call GET /surveys to retrieve all existing survey data, and POST /survey
 
 In the future, it should store them into a database.
 
-When lauched locally (npm start), it runs on localhost:4000.
+When lauched locally (npm run start-dev), it runs on localhost:4000.
 When pushed to GitHub, an automatic build is lauched on Heroku where the "prod" version runs...

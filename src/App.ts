@@ -6,6 +6,7 @@ const { randomBytes } = require('crypto');
 interface ReportInterface {
   username: string;
   reportStart: number;
+  score: number;
   data: any;
 }
 
@@ -32,12 +33,13 @@ class App {
 
     router.post('/surveys', async (req, res) => {
       const id = randomBytes(4).toString('hex');
-      const { username, reportStart, data }: ReportInterface = req.body;
+      const { username, reportStart, score, data }: ReportInterface = req.body;
       console.log(`received report for username : ${username}`);
       const survey = {
         id: id,
         username: username,
         reportStart: reportStart,
+        score: score,
         data: data,
       };
       surveys[id] = survey;
