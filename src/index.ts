@@ -5,6 +5,6 @@ app.listen(PORT, (err) => {
     console.error(`Error starting server: ${err}`);
     process.abort();
   }
-  console.log(`Hello! Listening to port ${PORT} for surveys`);
+  console.log(`Hi! Listening to port ${PORT} for surveys`);
   return;
 });

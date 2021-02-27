@@ -24,14 +24,18 @@ class App {
 
     const surveys = {};
     router.get('/', (req, res) => {
+      console.log('GET /');
       res.send('<h1>Hello ESG Revolution!</h1>');
     });
 
     router.get('/surveys', (req, res) => {
+      console.log('GET /surveys');
       res.send(surveys);
     });
 
     router.post('/surveys', async (req, res) => {
+      console.log('POST /surveys');
+
       const id = randomBytes(4).toString('hex');
       const { username, reportStart, score, data }: ReportInterface = req.body;
       console.log(`received report for username : ${username}`);
